@@ -69,6 +69,7 @@ EVERGREEN RULES (this canvas is sold as a template and used for years, by people
 - Find each column by its header name in row 1 (not by position), and treat the first row of every tab as the header.
 - Dates may arrive as "YYYY-MM-DD" text, as date serial numbers, or as Date values - handle all three. Write dates back as "YYYY-MM-DD". Amounts may arrive as numbers or text - parse them safely.
 - When editing a row, only send the cells that changed (leave the others undefined) so nothing else is overwritten.
+- Layout is full-width and fluid: no max-width containers (no max-w-7xl / mx-auto); use w-full with px-6 so it stretches edge to edge on any screen, and stacks cleanly on phones.
 - Every view needs a friendly empty state (e.g. "No transactions yet - add your first one") so the canvas still looks good after the sample data is deleted. Never show NaN, undefined or #ERROR.
 
 RULES: Never write formulas. Never change the header row. Dates written as real dates. Amounts as plain numbers. Validate required fields before saving.
@@ -108,6 +109,7 @@ EVERGREEN RULES (this canvas is sold as a template and used for years, by people
 - Find each column by its header name in row 1 (not by position), and treat the first row of every tab as the header.
 - Dates may arrive as "YYYY-MM-DD" text, as date serial numbers, or as Date values - handle all three. Write dates back as "YYYY-MM-DD". Amounts may arrive as numbers or text - parse them safely.
 - When editing a row, only send the cells that changed (leave the others undefined) so nothing else is overwritten.
+- Layout is full-width and fluid: no max-width containers (no max-w-7xl / mx-auto); use w-full with px-6 so it stretches edge to edge on any screen, and stacks cleanly on phones.
 - Every view needs a friendly empty state (e.g. "No transactions yet - add your first one") so the canvas still looks good after the sample data is deleted. Never show NaN, undefined or #ERROR.
 
 STYLE: Polished finance dashboard. White rounded cards with soft shadows on a light warm-gray background, accent #2F7D6D, headings #1E5A4E, Group colors: Income green, Fixed blue, Variable amber, Savings teal, Debt rose. Big bold numbers on KPI cards, money as $ with no decimals on cards. Responsive for laptop and phone.
