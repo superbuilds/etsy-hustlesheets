@@ -13,6 +13,38 @@ If a canvas comes out wrong, follow up in the same canvas with one short fix at 
 
 ---
 
+## Prompt 0 - Build the database with Gemini (instead of uploading the .xlsx)
+
+Paste into the Gemini side panel in a **blank** Google Sheet.
+
+```
+Set up this spreadsheet as a simple budget database with exactly 4 tabs. Use plain values only - no formulas, no titles, no merged cells. Each tab: bold header row in row 1 (white text on #2F7D6D), data from row 2, freeze row 1.
+
+1. Categories: Category | Group | Monthly Budget
+   Group must be one of: Income, Fixed, Variable, Savings, Debt (add a dropdown to the Group column).
+   Rows: Paycheck (Income, 4800), Side Hustle (Income, 600), Rent / Mortgage (Fixed, 1650), Utilities (Fixed, 220), Phone & Internet (Fixed, 140), Insurance (Fixed, 180), Car Payment (Fixed, 385), Subscriptions (Fixed, 45), Groceries (Variable, 600), Dining Out (Variable, 200), Gas (Variable, 180), Shopping (Variable, 150), Entertainment (Variable, 100), Personal Care (Variable, 60), Gifts (Variable, 50), Miscellaneous (Variable, 100), Emergency Fund (Savings, 300), Vacation (Savings, 150), Christmas Gifts (Savings, 75), Visa (Debt, 250), Store Card (Debt, 100), Student Loan (Debt, 200), Medical Bill (Debt, 50).
+
+2. Debts: Debt | Starting Balance | APR | Minimum Payment
+   Rows: Visa (3200, 22.9%, 95), Store Card (850, 26.99%, 35), Student Loan (12400, 5.5%, 140), Medical Bill (600, 0%, 50). Store APR as a decimal formatted as a percent.
+
+3. Goals: Goal | Target Amount | Target Date | Starting Amount
+   Rows: Emergency Fund (10000, Dec 31 next year, 2500), Vacation (3000, Jul 1 next year, 400), Christmas Gifts (900, Dec 1 this year, 450).
+
+4. Transactions: Date | Description | Category | Amount | Notes
+   Add a dropdown on Category that pulls from the Categories tab. Fill in realistic sample data for the last 3 full months plus the current month so far (about 100 rows, sorted by date):
+   - Paycheck 2400 on the 7th and 21st of each month; a Side Hustle "Etsy payout" of 480-720 once a month.
+   - Every Fixed category once a month at its budget amount (Utilities split into an electric bill ~95-140 and a water/gas bill ~60-90).
+   - Variable categories spread through the month, mostly under budget: Groceries 3-4 trips of 90-190, Dining Out 4 times 14-52, Gas 3 times 42-58, a couple of Shopping and Entertainment entries, occasional Gifts, Personal Care and Miscellaneous.
+   - Each month: Emergency Fund 300, Vacation 150, Christmas Gifts 75, Visa 250, Store Card 100, Student Loan 200, Medical Bill 50.
+   - Amounts are always positive numbers with 2 decimals. Every Category value must exactly match a name in the Categories tab.
+
+Format money columns as currency and dates as dates. Size columns to fit.
+```
+
+After it runs, spot-check: every Debts and Goals name appears in Categories with the same spelling, and no Transactions row has a category that isn't in Categories.
+
+---
+
 ## Prompt 1 - "Budget App" (data entry)
 
 ```
