@@ -40,6 +40,4 @@ GOOD TO KNOW
 
 This is a digital product - no physical item will be shipped.
 
-Designed by HustleSheets. Built with the help of AI tools (Google Gemini).
-
 Questions? Send me a message - I'm happy to help!
