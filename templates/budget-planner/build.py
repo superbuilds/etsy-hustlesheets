@@ -93,10 +93,10 @@ setup.column_dimensions["I"].hidden = True
 setup.freeze_panes = "B7"
 
 # ---------------- Transactions ----------------
-base(tx, {"B": 13, "C": 30, "D": 22, "E": 14, "F": 14, "G": 30})
+base(tx, {"B": 13, "C": 30, "D": 22, "E": 14, "F": 14, "G": 30, "H": 13, "I": 16})
 title(tx, "Transactions", "Step 2 - Log every purchase, bill and paycheck. Pick a category from the dropdown; Type fills in automatically.")
 tx["B3"] = "Enter amounts as positive numbers. Delete the sample rows when you're ready to start."; tx["B3"].font = font(size=9, color=MUTED, italic=True)
-header(tx, 5, 2, ["Date", "Description", "Category", "Amount", "Type", "Notes"])
+header(tx, 5, 2, ["Date", "Description", "Category", "Amount", "Type", "Notes", "Month", "Monthly Budget"])
 T0, T1 = 6, 1505
 d = lambda m, day: dt.date(YEAR, m, day)
 SAMPLE = [(d(1,1),"Rent","Rent / Mortgage",1650),(d(1,2),"Netflix + Spotify","Subscriptions",45),(d(1,3),"Kroger","Groceries",142.18),
@@ -125,6 +125,8 @@ for i, r in enumerate(range(T0, T1 + 1)):
     cell(tx, f"D{r}", s[2], inp=True); cell(tx, f"E{r}", s[3], MONEY2, inp=True)
     cell(tx, f"F{r}", f'=IF(D{r}="","",IFERROR(INDEX({TYP},MATCH(D{r},{CAT},0)),"Unknown"))', align="center", color=MUTED)
     cell(tx, f"G{r}", None, inp=True)
+    cell(tx, f"H{r}", f'=IF(B{r}="","",DATE(YEAR(B{r}),MONTH(B{r}),1))', "mmm yyyy", align="center", color=MUTED)
+    cell(tx, f"I{r}", f'=IF(D{r}="","",IFERROR(INDEX({BUD},MATCH(D{r},{CAT},0)),""))', MONEY, color=MUTED)
 dv = DataValidation(type="list", formula1=f"={CAT}", allow_blank=True); tx.add_data_validation(dv); dv.add(f"D{T0}:D{T1}")
 dvd = DataValidation(type="date", operator="greaterThan", formula1="36526", allow_blank=True); tx.add_data_validation(dvd); dvd.add(f"B{T0}:B{T1}")
 tx.conditional_formatting.add(f"F{T0}:F{T1}", CellIsRule(operator="equal", formula=['"Income"'], font=Font(name=F, color=GOOD, bold=True)))
