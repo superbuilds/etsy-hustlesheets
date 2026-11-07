@@ -63,6 +63,14 @@ SCREENS (tabs across the top):
 4. Debts - add/edit/delete debts. Adding a debt also adds a Debt-group category with the same name and a Monthly Budget equal to its Minimum Payment. Show each debt's current balance = Starting Balance minus all payments (transactions in its category).
 5. Goals - add/edit/delete goals. Adding a goal also adds a Savings-group category with the same name and a Monthly Budget of 0. Show each goal's saved amount = Starting Amount plus contributions, with a progress bar.
 
+EVERGREEN RULES (this canvas is sold as a template and used for years, by people who delete the sample data):
+- Never hardcode any date, month or year. "Today" is always new Date(). Default views to the current month; if the current month has no transactions, fall back to the latest month that has data.
+- Never hardcode lists of categories, groups' members, debts or goals - always read them from the tabs, so new rows the user adds show up everywhere (dropdowns, filters, charts).
+- Find each column by its header name in row 1 (not by position), and treat the first row of every tab as the header.
+- Dates may arrive as "YYYY-MM-DD" text, as date serial numbers, or as Date values - handle all three. Write dates back as "YYYY-MM-DD". Amounts may arrive as numbers or text - parse them safely.
+- When editing a row, only send the cells that changed (leave the others undefined) so nothing else is overwritten.
+- Every view needs a friendly empty state (e.g. "No transactions yet - add your first one") so the canvas still looks good after the sample data is deleted. Never show NaN, undefined or #ERROR.
+
 RULES: Never write formulas. Never change the header row. Dates written as real dates. Amounts as plain numbers. Validate required fields before saving.
 
 STYLE: Modern mobile-first finance app. White rounded cards on a light warm-gray background, accent #2F7D6D, headings #1E5A4E, Group colors: Income green, Fixed blue, Variable amber, Savings teal, Debt rose. Money shown as $ with 2 decimals in lists. Large tap targets; works on phone and laptop.
@@ -93,6 +101,14 @@ SECTIONS (tabs across the top):
 3. Calendar - month calendar heatmap of daily spending (Fixed + Variable + Debt); tap a day to list its transactions. Cards: average spend per day, biggest expense, no-spend days.
 4. Debt Payoff - a toggle for Snowball (smallest balance first) or Avalanche (highest APR first) and an input for monthly debt budget (default = total Monthly Budget of all Debt-group categories). Simulate month by month from current balances: each month add interest (balance x APR / 12), pay every debt its minimum (or its remaining balance), then put all leftover budget on the focus debt in strategy order; when a debt is paid off its payment rolls to the next. Show: debt-free date, total interest, months to go, a card per debt (current balance, APR, minimum, payoff month, "Focus" badge on the current target), a total-debt-over-time area chart, and a comparison line "Snowball vs Avalanche: X months / $Y interest". Warn if the budget is less than the total minimum payments.
 5. Goals - card per goal with a progress ring, saved / target, target date, months left, and "Save $X per month to hit your date" (remaining / months left, minimum 1 month). Celebrate goals that are reached.
+
+EVERGREEN RULES (this canvas is sold as a template and used for years, by people who delete the sample data):
+- Never hardcode any date, month or year. "Today" is always new Date(). Default views to the current month; if the current month has no transactions, fall back to the latest month that has data.
+- Never hardcode lists of categories, groups' members, debts or goals - always read them from the tabs, so new rows the user adds show up everywhere (dropdowns, filters, charts).
+- Find each column by its header name in row 1 (not by position), and treat the first row of every tab as the header.
+- Dates may arrive as "YYYY-MM-DD" text, as date serial numbers, or as Date values - handle all three. Write dates back as "YYYY-MM-DD". Amounts may arrive as numbers or text - parse them safely.
+- When editing a row, only send the cells that changed (leave the others undefined) so nothing else is overwritten.
+- Every view needs a friendly empty state (e.g. "No transactions yet - add your first one") so the canvas still looks good after the sample data is deleted. Never show NaN, undefined or #ERROR.
 
 STYLE: Polished finance dashboard. White rounded cards with soft shadows on a light warm-gray background, accent #2F7D6D, headings #1E5A4E, Group colors: Income green, Fixed blue, Variable amber, Savings teal, Debt rose. Big bold numbers on KPI cards, money as $ with no decimals on cards. Responsive for laptop and phone.
 ```
