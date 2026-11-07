@@ -1,6 +1,6 @@
 # Etsy listing - Marketing Content Calendar (Sheets canvas app)
 
-**Price:** $19.99 launch (raise to $24.99 after ~10 reviews) · **Section:** Business Dashboards · **Type:** digital download (Quick Start PDF with "Make a copy" link)
+**Price:** $19.97 launch (raise to $24.99 after ~10 reviews) · **Section:** Business Dashboards · **Type:** digital download (Quick Start PDF with "Make a copy" link)
 
 ## Title
 Marketing Content Calendar Google Sheets Template - Drag & Drop Kanban Board, Social Media Planner and Editorial Calendar for Teams
