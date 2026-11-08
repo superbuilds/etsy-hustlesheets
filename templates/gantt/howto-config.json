@@ -1,0 +1,18 @@
+{"brand":"#2563EB","dark":"#1E3A8A","light":"#DBEAFE","product":"Project Gantt Chart &amp; Tracker",
+ "tagline":"Your interactive project timeline inside Google Sheets. Thank you for your purchase!",
+ "copy_link":"https://docs.google.com/spreadsheets/d/14fEUGOJp0H2FY2NBtdL4ilc2dtVApgoBOaTgVmXGhR0/copy",
+ "footer":"HustleSheets","page_split":3,
+ "how_steps":[["Make your copy","Click the link in your PDF → Make a copy. It's yours in Google Drive.","/tmp/claude-0/-home-user-etsy-hustlesheets/993a84d6-9cca-59f0-9147-2fafa3e0db4f/scratchpad/gantt/prev/shots/timeline-month.png",[0,0,1700,1200]],
+              ["Add your tasks","Click + Add Task - phase, owner, dates and progress in one form.","/tmp/claude-0/-home-user-etsy-hustlesheets/993a84d6-9cca-59f0-9147-2fafa3e0db4f/scratchpad/gantt/prev/shots/edit.png",[1080,480,2120,1520]],
+              ["Watch it update","Bars, progress and overdue flags update automatically on the timeline.","/tmp/claude-0/-home-user-etsy-hustlesheets/993a84d6-9cca-59f0-9147-2fafa3e0db4f/scratchpad/gantt/prev/shots/timeline.png",[600,560,2600,1400]]],
+ "guide_sections":[
+  ["Make your copy","<p>Click the button above while signed in to Google. Your own copy is saved to your Google Drive - rename it anything you like.</p>",null,null],
+  ["Open the timeline","<p>At the bottom of the spreadsheet, click the <b>Project Timeline Gantt Chart</b> tab. That's your app. The <b>Gantt Chart</b> tab next to it is the spreadsheet that stores every task (with its own weekly Gantt grid).</p>",null,null],
+  ["Add a task","<p>Click <b>+ Add Task</b>. Enter the task name, phase, owner, start and end dates, status and % complete, then <b>Create Task</b>. Duration is calculated for you.</p>","/tmp/claude-0/-home-user-etsy-hustlesheets/993a84d6-9cca-59f0-9147-2fafa3e0db4f/scratchpad/gantt/prev/shots/edit.png",[1080,480,2120,1250]],
+  ["Read your timeline","<p>Each task is a bar from its start to end date, filled by % complete and grouped by phase. The <b>red line</b> is today, and a <b>red outline</b> means a task is overdue. Use <b>Week / Month</b> to zoom and <b>Jump to Today</b> to scroll to now. Click any bar to edit it.</p>","/tmp/claude-0/-home-user-etsy-hustlesheets/993a84d6-9cca-59f0-9147-2fafa3e0db4f/scratchpad/gantt/prev/shots/timeline.png",[600,560,2800,1300]],
+  ["Use the table","<p>Switch to <b>Table</b> to see every task in rows. Change status from the dropdown, hover over % complete and click <b>+ / -</b> to update progress, use the arrows to reorder tasks, and the pencil or trash can to edit or delete. Search and filter by status, phase or owner on any view.</p>",null,null],
+  ["Make it yours","<p>The sample project shows how everything works. Open the <b>Gantt Chart</b> tab, update the project lead and target delivery date at the top, and delete the sample task rows below the header row (keep the header and summary rows). The timeline adjusts to your dates automatically.</p>",null,null]],
+ "tip":"The timeline works best in a web browser on a computer. On a phone, open your sheet in your mobile browser rather than the Sheets app.",
+ "faq":[["Do I need a paid Google plan?","No - it works with a free Google account."],["Can my team use it?","Yes - share your copy like any Google Sheet. Anyone with edit access can update tasks."],
+        ["Can I add my own phases?","Yes - type any phase name when adding a task and it gets its own group."],["Can I change the app's design?","The layout is fixed, but all of your tasks, dates, owners and progress are fully editable."],
+        ["Need help?","Message me on Etsy - I'm happy to help."]]}

@@ -1,0 +1,6 @@
+{"brand":"#2563EB","dark":"#1E3A8A","light":"#DBEAFE","eyebrow":"GOOGLE SHEETS APP",
+ "title":"Project Gantt Chart","subtitle":"Plan every phase, track progress and spot overdue tasks on an interactive timeline in Google Sheets.",
+ "features":["Interactive Gantt timeline","Week &amp; month zoom + today line","Progress bars &amp; overdue alerts","Phases, owners &amp; filters"],
+ "stats":[["Tasks planned","12"],["Overdue","0"]],
+ "tabs":["Timeline","Table","Add / Edit Form","Live Stats"],
+ "screenshot":"/tmp/claude-0/-home-user-etsy-hustlesheets/993a84d6-9cca-59f0-9147-2fafa3e0db4f/scratchpad/gantt/prev/shots/timeline-month.png","pills":["Instant access","Free Google account","No formulas to touch"]}
