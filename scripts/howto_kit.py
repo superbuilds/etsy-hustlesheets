@@ -42,7 +42,7 @@ guide = f'''<!doctype html><html><head><meta charset="utf-8"><style>{CSS}
 .small{{font-size:11.5px;color:#6b7280;text-align:center;margin-top:8px}}
 .sec{{display:flex;gap:16px;margin-top:15px}} .sn{{flex:none;width:36px;height:36px;border-radius:50%;background:{Lt};color:{B};font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px}}
 .sb h2{{font-size:18px;font-weight:800;color:{D};margin-top:5px}} .sb p,.sb li{{font-size:13px;line-height:1.55;color:#374151;margin-top:5px}} .sb ul{{margin-left:18px}}
-.im{{width:100%;max-height:2.6in;object-fit:cover;object-position:top;border-radius:12px;border:1px solid #e5e7eb;margin-top:10px}}
+.im{{width:100%;max-height:{cfg.get('img_max','2.6in')};object-fit:cover;object-position:top;border-radius:12px;border:1px solid #e5e7eb;margin-top:10px}}
 .tip{{background:#FFF7D6;border-radius:12px;padding:12px 16px;font-size:12.5px;color:#713f12;margin-top:14px;line-height:1.5}}
 h3.f{{font-size:16px;color:{D};margin-top:12px;font-weight:800}} .faq p{{font-size:12.5px;color:#374151;line-height:1.5;margin-top:3px}}
 .ft{{position:absolute;bottom:.28in;left:.7in;right:.7in;font-size:11px;color:#9ca3af;display:flex;justify-content:space-between}}
